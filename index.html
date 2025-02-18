@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>支票資訊生成器</title>
   <style>
-    /* 全局樣式：將字體設置為響應式大小，增加間距 */
+    /* 全局樣式：設定字體、間距及響應設計 */
     body {
       font-family: Arial, sans-serif;
       margin: 10px;
@@ -34,6 +34,7 @@
       box-sizing: border-box;
     }
 
+    /* 輸出欄位樣式：粗體、紅字 */
     .output-field {
       font-weight: bold;
       color: red;
@@ -41,7 +42,7 @@
       margin-bottom: 1em;
     }
 
-    /* 縮短日期欄位 */
+    /* 縮短日期欄位的寬度 */
     #cashDate {
       width: 150px;
     }
@@ -61,29 +62,33 @@
       flex-direction: column;
       align-items: center;
       margin-top: 20px;
+      width: 100%;
+      max-width: 300px; /* 確保在大螢幕上也不會過寬 */
+      margin: 0 auto; /* 保持居中 */
     }
 
     .check .account-name {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       text-align: center;
       margin-bottom: 15px;
     }
 
     .check .amount-words {
-      font-size: 14px;
+      font-size: 12px;
       text-align: center;
       word-wrap: break-word;
       margin-bottom: 15px;
     }
 
-    .check .date, .check .amount-number {
-      font-size: 14px;
+    .check .date,
+    .check .amount-number {
+      font-size: 12px;
       text-align: center;
       margin-bottom: 10px;
     }
 
-    /* 媒體查詢：調整小螢幕上的樣式 */
+    /* 響應式設計 */
     @media (max-width: 768px) {
       h1 {
         font-size: 1.2em;
