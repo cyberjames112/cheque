@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>支票資訊生成器</title>
+  <style>
+    /* 輸出欄位的樣式：粗體紅字，並設定區塊樣式和垂直間距 */
+    .output-field {
+      font-weight: bold;
+      color: red;
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    /* 日期欄位縮短的樣式 */
+    #cashDate {
+      width: 150px;
+    }
+
+    /* 增強日曆按鈕的樣式 */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      background-color: red;
+      border: 1px solid black;
+      border-radius: 4px;
+    }
+
+    /* 支票容器 */
+    .check {
+      border: 1px solid #000;
+      width: 300px;
+      height: 200px;
+      position: absolute;
+      right: 20px;
+      top: 50px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* 建商帳戶名稱（中間上方） */
+    .check .account-name {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* 英文大寫金額（中間下方） */
+    .check .amount-words {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* 日期（右上角） */
+    .check .date {
+      font-size: 14px;
+      text-align: right;
+    }
+
+    /* 阿拉伯數字金額（右下角） */
+    .check .amount-number {
+      font-size: 14px;
+      text-align: right;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>支票資訊生成器</h1>
+  
+  <!-- 建案下拉選單 -->
+  <label for="project">選擇建案：</label>
+  <select id="project">
+    <option value="">--請選擇--</option>
+    <option value="Quill">Quill</option>
+    <option value="Pavilion Square">Pavilion Square</option>
+    <option value="Bon Kiara">Bon Kiara</option>
+    <option value="Skylon">Skylon</option>
+    <option value="Conlay">Conlay</option>
+    <option value="裝修公司">裝修公司</option>
+  </select>
+  <br>
+  
+  <!-- 顯示對應的銀行戶名 -->
+  <label for="developerAccount">銀行戶名：</label>
+  <input type="text" id="developerAccount" class="output-field" readonly>
+  <br>
+  
+  <!-- 金額輸入 -->
+  <label for="amount">支票金額：</label>
+  <input type="number" id="amount" placeholder="輸入金額">
+  <br>
+  
+  <!-- 英文大寫金額 -->
+  <label for="amountWords">金額（英文大寫）：</label>
+  <textarea id="amountWords" class="output-field" readonly rows="3"></textarea>
+  <br>
+  
+  <!-- 日期選擇 -->
+  <label for="cashDate">兌現日期：</label>
+  <input type="date" id="cashDate">
+  <br>
+  
+  <!-- 格式化日期 -->
+  <label for="formattedDate">格式化日期（ddmmyyyy）：</label>
+  <input type="text" id="formattedDate" class="output-field" readonly>
+  <br>
+
+  <!-- 支票右側的模擬區域 -->
+  <div class="check">
+    <div class="account-name" id="checkAccountName"></div>
+    <div class="amount-words" id="checkAmountWords"></div>
+    <div class="date" id="checkDate"></div>
+    <div class="amount-number" id="checkAmountNumber"></div>
+  </div>
+
+  <!-- 外部JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
