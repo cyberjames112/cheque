@@ -6,7 +6,7 @@ const projectData = {
   "Skylon": "GBD DEVELOPMENT SDN BHD",
   "Conlay": "PATSAWAN PROPERTIES SDN BHD",
   "裝修公司": "XINHAUS ENTERPRISE"
-  "Skyline Embassy Tower": "SKYLINE EMBASSY SDN BHD",
+  "Skyline Embassy": "SKYLINE EMBASSY SDN BHD",
   "Oxley KLCC": "Oxley Rising Sdn Bhd",
   "二家代辦": "SHL INTERNATIONAL(MM2H) SDN.BHD"
 };
