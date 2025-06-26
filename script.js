@@ -8,6 +8,8 @@ const projectData = {
   "裝修公司": "XINHAUS ENTERPRISE",
   "Skyline Embassy": "SKYLINE EMBASSY SDN BHD",
   "Oxley KLCC": "Oxley Rising Sdn Bhd",
+  "Bangsar Hill Park": "Bangsar Hill Park Developmnt Sdn Bhd",
+  "Armani Hallson": "Armani Hallson KLCC Sdn Bhd",
   "二家代辦": "SHL INTERNATIONAL(MM2H) SDN.BHD"
 };
 
